@@ -47,18 +47,47 @@ class RPNcalcUITests: XCTestCase {
         for button in numberButtonArray {
            XCTAssertEqual(button.isEnabled, false)
         }
+        
+        
 
     }
     
     
     func testIfDisplayIsBeingUpdated() {
         
-        XCUIApplication().activate()
+        XCUIApplication().launch()
         let app = XCUIApplication()
         
         app.buttons["0"].tap()
+        app.buttons["1"].tap()
+        app.buttons["5"].tap()
         
-        XCTAssertEqual(app.staticTexts[""].text, "0")
+        XCTAssertEqual(app.staticTexts[" 015"].exists, true)
         
+    }
+    
+    
+    func testIfErrorsAreBeingDisplayed() {
+        
+        XCUIApplication().launch()
+        let app = XCUIApplication()
+        
+        app.buttons["0"].tap()
+        app.buttons["1"].tap()
+        app.buttons["EVAL"].tap()
+        
+        XCTAssertEqual(app.staticTexts[" = Error"].exists, true)
+        
+    }
+    
+    func testIfUserCanSeeSignChange() {
+        
+        XCUIApplication().launch()
+        let app = XCUIApplication()
+        
+        app.buttons["9"].tap()
+        app.buttons["+/-"].tap()
+        
+        XCTAssertEqual(app.staticTexts[" -9"].exists, true)
     }
 }

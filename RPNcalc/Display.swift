@@ -20,21 +20,33 @@ class Display {
         self.currentElement = currentElement
     }
     
+    
+    func clearCurrentElement() {
+        self.currentElement = ""
+    }
+    
+    
+     
     func clear() {
         self.characters = " "
         self.expression = []
         self.currentElement = ""
     }
     
+    
     func addChar(character: String) {
         self.characters.append(character)
     }
+    
+    
     
     func addExpression() {
         self.expression.append(self.currentElement)
     }
     
+    
     func addToCurrent(value: String) {
         self.currentElement += value
     }
+    
 }

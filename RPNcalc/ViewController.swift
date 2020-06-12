@@ -186,7 +186,7 @@ class ViewController: UIViewController {
     @IBAction func enterButtonTap(_ sender: Any) {  // When enter is pressed the current element is added to the whole expression
         self.display.addExpression()
         self.display.characters += self.display.currentElement
-        self.display.currentElement = ""
+        self.display.clearCurrentElement()
         self.numberCounter = 0               // resets the number counter
         enableAllButtons()                  // enables all buttons as new current element is being created
         updateDisplay()

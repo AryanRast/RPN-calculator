@@ -62,6 +62,23 @@ class RPNcalcTests: XCTestCase {
     }
     
     
+    func testIfExpressionsAreBeingBuiltProperly() {
+        
+        let display = Display(characters: "", expression: [], currentElement: "")
+        display.addToCurrent(value: "23")
+        display.addExpression()
+        display.clearCurrentElement()
+        display.addToCurrent(value: "20")
+        display.addExpression()
+        display.clearCurrentElement()
+        display.addToCurrent(value: "*")
+        display.addExpression()
+        display.clearCurrentElement()
+        
+        XCTAssertEqual(display.expression, ["23", "20", "*"])
+    }
+    
+    
 
 
 }
