@@ -224,33 +224,35 @@ class ViewController: UIViewController {
     
     
     func uiSetup() {
-           let numberButtonArray = [signButton, clearButton, zeroButton, oneButton, twoButton, threeButton, fourButton, fiveButton, sixButton, sevenButton, eightButton, nineButton]
-           for button in numberButtonArray {
-               button?.backgroundColor = UIColor(red: 0.922, green: 0.922, blue: 0.941, alpha: 1.0)
-               button?.frame = CGRect(x: (button?.frame.origin.x)!, y: (button?.frame.origin.y)!, width: 105.0, height: 105.0)
-               button?.layer.cornerRadius = 10
-               
-           }
-           clearButton.backgroundColor = UIColor(red: 0.52, green: 0.598, blue: 0.957, alpha: 1.0)
-           clearButton.setTitleColor(.white, for: .normal)
-           let operaterButtonArray = [addButton, multiplyButton, subtractButton, divideButton]
-           for button in operaterButtonArray {
-               button?.backgroundColor = UIColor(red: 0.957, green: 0.828, blue: 0.105, alpha: 1.0)
-               button?.setTitleColor(.white, for: .normal)
-               button?.layer.cornerRadius = 10
-           }
-           enterButton.backgroundColor = UIColor(red: 0.957, green: 0.297, blue: 0.496, alpha: 1.0)
-           enterButton.setTitleColor(.white, for: .normal)
-           enterButton.layer.cornerRadius = 10
-           evalButton.backgroundColor = UIColor(red: 0.957, green: 0.297, blue: 0.496, alpha: 1.0)
-           evalButton.setTitleColor(.white, for: .normal)
-           evalButton.layer.cornerRadius = 10
-           displayLabel.layer.borderColor = UIColor.black.cgColor
-           displayLabel.layer.borderWidth = 1.0
-           displayLabel.layer.cornerRadius = 6.0
+       let numberButtonArray = [signButton, clearButton, zeroButton, oneButton, twoButton, threeButton, fourButton, fiveButton, sixButton, sevenButton, eightButton, nineButton]
+       for button in numberButtonArray {
+           button?.backgroundColor = UIColor(red: 0.922, green: 0.922, blue: 0.941, alpha: 1.0)
+           button?.frame = CGRect(x: (button?.frame.origin.x)!, y: (button?.frame.origin.y)!, width: 105.0, height: 105.0)
+           button?.layer.cornerRadius = 10
+           
+       }
+       clearButton.backgroundColor = UIColor(red: 0.52, green: 0.598, blue: 0.957, alpha: 1.0)
+       clearButton.setTitleColor(.white, for: .normal)
+       let operaterButtonArray = [addButton, multiplyButton, subtractButton, divideButton]
+       for button in operaterButtonArray {
+           button?.backgroundColor = UIColor(red: 0.957, green: 0.828, blue: 0.105, alpha: 1.0)
+           button?.setTitleColor(.white, for: .normal)
+           button?.layer.cornerRadius = 10
+       }
+       enterButton.backgroundColor = UIColor(red: 0.957, green: 0.297, blue: 0.496, alpha: 1.0)
+       enterButton.setTitleColor(.white, for: .normal)
+       enterButton.layer.cornerRadius = 10
+       evalButton.backgroundColor = UIColor(red: 0.957, green: 0.297, blue: 0.496, alpha: 1.0)
+       evalButton.setTitleColor(.white, for: .normal)
+       evalButton.layer.cornerRadius = 10
+       displayLabel.layer.borderColor = UIColor.black.cgColor
+       displayLabel.layer.borderWidth = 1.0
+       displayLabel.layer.cornerRadius = 6.0
+       signButton.backgroundColor = UIColor(red: 0.176, green: 0.871, blue: 0.381, alpha: 1.0)
+       signButton.setTitleColor(.white, for: .normal)
            
 
-       }
+    }
     
 }
 

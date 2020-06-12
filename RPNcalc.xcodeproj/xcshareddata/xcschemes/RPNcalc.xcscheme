@@ -42,7 +42,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C68518512490D56A00509A07"
+               BlueprintIdentifier = "C64B73022493C43300DD668A"
                BuildableName = "RPNcalcUITests.xctest"
                BlueprintName = "RPNcalcUITests"
                ReferencedContainer = "container:RPNcalc.xcodeproj">
